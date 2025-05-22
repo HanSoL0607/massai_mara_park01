@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew clean build
 
       - name: list build/libs directory
-        run: ls -l ./build/libs
+        run: ls -al ./build/libs
 
       - name: run springboot application
         run: java -jar ./build/libs/massai-mara-park-0.0.1-SNAPSHOT.jar &
