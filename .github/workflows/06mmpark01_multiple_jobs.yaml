@@ -49,7 +49,7 @@ jobs:
         run: ls -al
 
       - name: run springboot application
-        run: java -jar ./application.jar & || exit 1
+        run: java -jar ./application.jar &
           sleep 30 # stand by 30 seconds for the application to start
 
   test:
