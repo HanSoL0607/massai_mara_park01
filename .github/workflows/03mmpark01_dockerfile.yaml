@@ -20,7 +20,7 @@ jobs:
           push: false
           load: true
           tags: massai_mara:v1
-          cache-from: type'gha
+          cache-from: type=gha # gha: github actiions cache
           cache-to: type=gha, mode=max
 
       - name: run docker container
