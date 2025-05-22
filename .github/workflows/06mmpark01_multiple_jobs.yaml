@@ -58,11 +58,11 @@ jobs:
         run: java -jar ./application.jar &
           sleep 30 # stand by 30 seconds for the application to start
 
-  test:
-    name: app test
-    needs: deploy
-    runs-on: ubuntu-22.04
-    steps:
+      #  test:
+      #    name: app test
+      #    needs: deploy
+      #    runs-on: ubuntu-22.04
+      #    steps:
       - name: run automated test #1
         run: curl http://localhost:8080 || exit 1
 
