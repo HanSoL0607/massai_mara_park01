@@ -62,8 +62,8 @@ jobs:
 
       - name: upload JAR via SCP
         run: |
-          scp -i ~/.ssh/ec2_key -o "StrictHostKeyChecking=no"
-          -o "UserKnownHostsFile=/dev/null"
+          scp -i ~/.ssh/ec2_key -o "StrictHostKeyChecking=no" \
+          -o "UserKnownHostsFile=/dev/null" \
           -P 12137 *SNAPSHOT.jar \
           ${{env.EC2_USERNAME}}@${{env.EC2_HOSTNAME}}:~/
 
