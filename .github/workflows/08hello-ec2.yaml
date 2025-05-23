@@ -14,7 +14,7 @@ jobs:
           chmod 700 ~/.ssh
       - name: make private key file
         run: |
-          echo "${{ secrets.EC2_PRIVATEKEY}}"> ~/.ssh/ec2_key
+          echo "${{ secrets.EC2_PRIVATEKEY }}"> ~/.ssh/ec2_key
           chmod 600 ~/.ssh/ec2_key
 
       - name: test SSH connect to EC2
@@ -26,7 +26,7 @@ jobs:
 
           ssh -o StrictHostKeyChecking=no \
             -o "UserKnownHostsFile=/dev/null" \
-            -i ~/.ssh/clouds2025.pem -p 22 \
+            -i ~/.ssh/ec2_key -p 22 \
             ${USER_NAME}@${HOSTNAME} '
             echo "현재 사용자: $(whoami)"
             echo "현재 호스트명: $(hostname)"
