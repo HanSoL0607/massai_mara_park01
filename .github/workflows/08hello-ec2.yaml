@@ -16,6 +16,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
+
       - name: make private key file
         run: |
           echo "${{ secrets.EC2_PRIVATEKEY }}"> ~/.ssh/ec2_key
