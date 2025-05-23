@@ -19,7 +19,9 @@ jobs:
 
       - name: make private key file
         run: |
-          echo "${{ secrets.EC2_PRIVATEKEY }}"> ~/.ssh/ec2_key
+          cat <<EOF > ~/.ssh/ec2_key
+          ${{ secrets.EC2_PRIVATEKEY }}
+          EOF
           chmod 600 ~/.ssh/ec2_key
 
       - name: test SSH connect to EC2
