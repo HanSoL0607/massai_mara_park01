@@ -3,7 +3,7 @@ name: Test EC2 Connection with GHA
 on: workflow_dispatch
 
 env:
-  EC2_HOSTNAME: 172.31.6.135
+  EC2_HOSTNAME: 3.35.214.95
   EC2_USERNAME: ubuntu
 
 jobs:
